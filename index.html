@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>codeQuiz</title>
+<link rel="stylesheet" href="bootstrap.css" type="text/css">
+</link>
+</head>
+
+<body>
+
+    <!-- -- Start  -->
+
+    <div class="jumbotron" style="text-align: center;" id="homePage">
+        <div id="start">
+            <h1 class="display-3">Code Quiz Challenger</h1>
+            <hr class="my-4">
+            <p>Try to answer the following code-related question within the time limit. keep in mind that incorrect
+                answers
+                will penalize your score/time by ten seconds</p>
+            <p class="lead">
+                <button class="btn btn-primary btn-lg" id="start">Start Quiz</button>
+        </div>
+        <button class="btn btn-outline-secondary" id="goScoreboard">Score Board</button>
+        </p>
+    </div>
+
+
+    <!-- Quiz -->
+    <div class="jumbotron" style="text-align: center; display: none;" id="quizboard">
+
+        <h2 class="display-3" id="question">Code Quiz Challenger</h2>
+        <hr class="my-4">
+        <p class="lead">
+            <div id="quiz">
+                <button class="btn btn-primary btn-lg" id="choice1"></button>
+                <button class="btn btn-primary btn-lg" id="choice2"></button>
+                <button class="btn btn-primary btn-lg" id="choice3"></button>
+                <button class="btn btn-primary btn-lg" id="choice4"></button>
+            </div>
+        </p>
+        <hr class="my-4">
+        <div class="progress progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+            aria-valuemin="0" aria-valuemax="100" style="width: 0%;" id="timebar"></div>
+        <!-- <div class="progress progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+            id="timebar"></div> -->
+        <p class="lead" id="resultlabel"></p>
+        <div class="alert alert-dismissible alert-warning">
+            <h4 class="alert-heading">Warning!</h4>
+            <div class="mb-0" id="timer"></div>
+        </div>
+        <hr class="my-4">
+
+    </div>
+
+
+
+    <!-- Result -->
+    <div class="jumbotron" style="text-align: center; display: none;" id="scoreboard">
+        <h2 class="display-3">Code Quiz Challenger</h2>
+        <hr class="my-4">
+        <form id="signIn-form" method="POST">
+            <label for="user-text">Please sign in with your name:</label>
+            <input type="text" id="user-text" />
+        </form>
+        <hr class="my-4">
+        <button class="btn btn-primary btn-lg" id="register">Register</button>
+        <button class="btn btn-primary btn-lg" id="goBack">Go Back</button>
+        <hr class="my-4">
+        <p>Your score: <a id="user-score"></span></p>
+
+        <hr class="my-4">
+        <p class="table-success">Scoreboard</p>
+
+        <ul class="list-group" id="highScore-list"></ul>
+    </div>
+
+
+
+    <script type="text/javascript" src="question.js"></script>
+    <script type="text/javascript" src="quiz.js"> </script>
+
+</body>
+
+</html>
